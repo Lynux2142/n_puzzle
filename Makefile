@@ -6,7 +6,7 @@
 #    By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/16 12:18:12 by lguiller          #+#    #+#              #
-#    Updated: 2019/09/25 11:15:07 by lguiller         ###   ########.fr        #
+#    Updated: 2019/10/01 10:59:19 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ NAME			= npuzzle
 SRCS1			= main.cpp
 SRCS1			+= Coord.class.cpp
 SRCS1			+= State.class.cpp
+
 SRCS			= $(addprefix $(SRCS_DIR), $(SRCS1))
 OBJS			= $(addprefix $(OBJS_DIR), $(SRCS1:$(SUFFIX)=.o))
 
@@ -36,7 +37,7 @@ HEADER1			+= Coord.class.hpp
 HEADER1			+= State.class.hpp
 HEADER			= $(addprefix $(INCLUDES_DIR), $(HEADER1))
 
-CFLAGS			= -Wall -Wextra -g
+CFLAGS			= -Wall -Wextra -O1 -O2 -O3 -g
 CC				= clang++
 
 ##################
@@ -68,7 +69,7 @@ _CUT		= "\033[k"
 all: launch
 
 launch: title
-	echo $(_CLEAR)$(_YELLOW)"\nbuilding - "$(_GREEN)$(NAME)$(_END)
+	echo $(_CLEAR)$(_YELLOW)"building - "$(_GREEN)$(NAME)$(_END)
 	$(MAKE) $(NAME)
 	echo $(_GREEN)"\nDone."$(_END)$(_SHOW_CURS)
 
@@ -110,5 +111,5 @@ title:
 	echo
 	echo "◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆"
 	printf $(_YELLOW)
-	echo "                                                                           2018 © lguiller"
+	echo "                                                                           2019 © lguiller"
 	echo $(_END)
