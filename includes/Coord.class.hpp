@@ -6,14 +6,14 @@
 /*   By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 12:47:51 by lguiller          #+#    #+#             */
-/*   Updated: 2019/09/23 15:51:58 by lguiller         ###   ########.fr       */
+/*   Updated: 2019/10/29 10:54:06 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COORD_CLASS_HPP
 # define COORD_CLASS_HPP
 
-# include "npuzzle.h"
+# include <iostream>
 
 class				Coord
 {

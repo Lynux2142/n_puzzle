@@ -6,14 +6,14 @@
 /*   By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 12:58:32 by lguiller          #+#    #+#             */
-/*   Updated: 2019/09/25 12:47:38 by lguiller         ###   ########.fr       */
+/*   Updated: 2019/10/29 10:54:39 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TOOLS_CLASS_HPP
 # define TOOLS_CLASS_HPP
 
-# include "npuzzle.h"
+# include <iostream>
 # include "Coord.class.hpp"
 
 class				State

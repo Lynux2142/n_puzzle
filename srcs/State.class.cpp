@@ -6,11 +6,12 @@
 /*   By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 12:55:42 by lguiller          #+#    #+#             */
-/*   Updated: 2019/09/25 16:30:54 by lguiller         ###   ########.fr       */
+/*   Updated: 2019/10/29 12:09:26 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "State.class.hpp"
+#include "Coord.class.hpp"
 
 State::State(void) : grid(NULL)
 {
@@ -100,21 +101,19 @@ void			State::setMixValue(void)
 			{
 				++value;
 				Coord b(this->findFinalCoord(this->grid[a.y][a.x]));
-				value += (std::abs(a.x - b.x) + std::abs(a.y - b.y));
+				value += ((this->size - this->grid[a.y][a.x] + 1) * (std::abs(a.x - b.x) + std::abs(a.y - b.y)));
 			}
 	this->heuristic = value;
-	this->mixValue = this->heuristic + this->shortestPath.size();
+	this->mixValue = this->shortestPath.size() + this->heuristic;
 }
 
 void			State::printState(void) const
 {
-	std::ostream &o(std::cout);
-
-	o << "Actual State:" << std::endl;
-	o << *this;
-	o << std::endl << "ShortestPath:" << std::endl;
-	o << (this->shortestPath.empty() ? "/" : this->shortestPath) << std::endl;
-	o << std::endl << this->shortestPath.size() << " moves" << std::endl;
+	std::cout << "Actual State:" << std::endl;
+	std::cout << *this;
+	std::cout << std::endl << "ShortestPath:" << std::endl;
+	std::cout << (this->shortestPath.empty() ? "/" : this->shortestPath) << std::endl;
+	std::cout << std::endl << this->shortestPath.size() << " moves" << std::endl;
 }
 
 State			State::swap(char action) const
