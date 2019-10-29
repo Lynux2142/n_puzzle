@@ -6,7 +6,7 @@
 /*   By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 10:21:40 by lguiller          #+#    #+#             */
-/*   Updated: 2019/10/29 12:22:51 by lguiller         ###   ########.fr       */
+/*   Updated: 2019/10/29 12:35:57 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,12 +124,7 @@ static void		initState(State &actual)
 //	const char value[] = { 10, 9, 6, 7, 15, 1, 11, 2, 4, 12, 16, 3, 14, 5, 8, 13 };
 //	const char value[] =  { 16, 11, 13, 14, 8, 1, 15, 2, 4, 6, 7, 3, 9, 12, 5, 10 };
 //	const char value[] = { 10, 11, 16, 13, 12, 1, 3, 5, 8, 15, 6, 14, 7, 9, 4, 2 };
-	const char value[] = {
-		 7,  6, 13,  5,
-11, 15, 14,  3,
-10, 16,  1, 12,
- 8,  9,  4,  2
-	};
+	const char value[] = { 7, 6, 13, 5, 11, 15, 14, 3, 10, 16, 1, 12, 8, 9, 4, 2 };
 	for (int y(0) ; y < actual.height ; ++y)
 		for (int x(0) ; x < actual.width ; ++x)
 		{
