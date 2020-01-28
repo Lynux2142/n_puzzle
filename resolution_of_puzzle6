@@ -1,0 +1,13 @@
+Begin State:
+ 1  2  3  4
+ 0  6  7  8
+ 9 10 11 12
+13 14 15  5
+
+ 1  2  3  4
+12 13 14  5
+11  0 15  6
+10  9  8  7
+SESEENNWWSESENNWSSWWNEESENNWWSSWNNESWSEN
+40 moves
+./npuzzle puzzles/puzzle6  2318.81s user 7.44s system 99% cpu 39:05.34 total
